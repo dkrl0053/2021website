@@ -10,6 +10,24 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/jquery.bxslider.js"></script>
+    <script>
+        $(document).ready(function(){
+            var conslider = $(".slider").bxSlider({
+                controls:false,
+                // auto: true,
+                // pager: false,
+                pagerCustom:".sliderTap"
+
+            });
+
+            $(".nextBtn").click(function(){
+                conslider.goToNextSlide();
+            });
+            $(".prevBtn").click(function(){
+                conslider.goToPrevSlide();
+            });
+        });
+    </script>
 
 </head>
 <body>
@@ -55,24 +73,114 @@
     </header>
 
     <main id="content_wrap">
-        <section id="contents">
-            <div class="contents_title"> <!--메인 타이틀, 아이콘-->
-                <div class="main_title">
-                    <p>함께 나누며 세상을 이끌어<br> <span>세계로향하는 한국대학교</span></p>
-                </div>
-
-                <ul class="main_icon clearfix">
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                </ul>
+        <section id="title"><!--메인 타이틀, 아이콘-->
+            <div class="title_txt"> 
+               <p>함께 나누며 세상을 이끌어<br> <span>세계로향하는 한국대학교</span></p>
             </div>
-            <div class="containel"> <!--컨텐츠-->
-
-            </div>
-
-        </section>
-</main>
+            <ul class="title_icon clearfix">
+                <li>
+                    <a href="#">
+                        <!-- <img src="./images/icon.png" alt=""> -->
+                        <div class="icon1"></div>
+                        <h3>입학절차안내</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon2"></div>
+                        <h3>입학설명회</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon3"></div>
+                        <h3>장학제도</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon4"></div>
+                        <h3>증명서발급</h3>
+                    </a>
+                </li>
+            </ul>    
+        </section> 
+        <div class="container"> <!--컨텐츠-->
+            <ul class="clearfix">
+                <li>
+                    <div class="slider_wrap">
+                        <ul class="slider">
+                            <li>
+                                <img src="images/slider_bg01.jpg" alt="">
+                                <div class="slider_txt">
+                                    <p><span>한국</span>에서<br> <span>시작</span>하는 <br>새로운 <span>꿈</span></p>
+                                    <a href="#">자세히 보기 ▶</a>
+                                </div>
+                            </li>
+                        <li>
+                                <img src="images/slider_bg01.jpg" alt="">
+                                <div class="slider_txt">
+                                    <p><span>한국</span>에서<br> <span>시작</span>하는 <br>새로운 <span>꿈</span></p>
+                                    <a href="#">자세히 보기 ▶</a>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/slider_bg01.jpg" alt="">
+                                <div class="slider_txt">
+                                    <p><span>한국</span>에서<br> <span>시작</span>하는 <br>새로운 <span>꿈</span></p>
+                                    <a href="#">자세히 보기 ▶</a>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/slider_bg01.jpg" alt="">
+                                <div class="slider_txt">
+                                    <p><span>한국</span>에서<br> <span>시작</span>하는 <br>새로운 <span>꿈</span></p>
+                                    <a href="#">자세히 보기 ▶</a>
+                                </div>
+                            </li>
+                        </ul>  
+                        <div class="nextBtn"></div>
+                        <div class="prevBtn"></div>
+                        <div class="sliderTap">
+                            <a href="#" data-slide-index="0"></a>
+                            <a href="#" data-slide-index="1"></a>
+                            <a href="#" data-slide-index="2"></a>
+                            <a href="#" data-slide-index="3"></a>
+                        </div>
+                    </div>              
+                </li>
+                
+                <li>
+                    <div class="app_wrap">
+                        <img src="images/slider_bg02.jpg" alt="">
+                        <div class="app_txt_wrap">
+                        <p class="app_title"><span>APP</span>으로 <br><span>스마트 도서관</span><br> 바로이용하자!</p>
+                        <p class="app_txt">모바일 열람증은 <br>도서관 자료실/도서대출 등에 <br>사용 할 수 있습니다.</p>
+                        <a href="#">자세히 보기 ▶</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="hotlink_wrap">
+                        <h2>HOT LINK</h2>
+                        <ul class="hotlink_icon_wrap">
+                            <li>
+                                <a href="#">
+                                    <div class="hotlink_icon1"></div>
+                                    <h3>국제교류<br>센터</h3>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>04</li>
+                <li>05</li>
+                <li>06</li>
+                <li>07</li>
+                <li>08</li>
+            </ul>
+        </div>
+    </main>
+    <footer id="footer"></footer>
 </body>
 </html>
