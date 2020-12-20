@@ -94,14 +94,13 @@
     float: left;
     position: absolute;
     left: 0; top: 34px;
-
 }
 
 .header_main .main_menu{
-    margin-left: auto;
+    /* margin-left: auto; */
     display: block;
     position: absolute;
-    right: 0; top: 36px;
+    right: 0; top: 34px;
 }
 
 .header_main .main_menu li{
@@ -239,12 +238,14 @@
 
 
 /*container*/
-
 #content_wrap .container{
     width: 1200px;
     margin: 0 auto;
-    background: #eee;
-    
+    /* background: #eee; */
+}
+
+#content_wrap .container > ul{
+    margin-bottom: 20px;
 }
 
 #content_wrap .container > ul > li{
@@ -420,7 +421,7 @@
 .hotlink_wrap h3{
     width: 63px;
     color: #fff;
-    font-size: 14px;
+    font-size: 13px;
     text-align: center;
     line-height: 20px;
 }
@@ -428,7 +429,24 @@
 .notice_wrap{
     height: 225px;
     padding: 21px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
 }
+ 
+.notice_wrap:after{
+    content: "";
+    display: block;
+    width: 300px; height: 225px;
+    position: absolute;
+    bottom: -55px; left: 155px;
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    opacity: 30%;
+    z-index: -1;
+}
+
+
 .notice_wrap h2{
     color: #fff;
     font-size: 22px;
@@ -439,10 +457,9 @@
     width: 100%;
     height: 2px;
     background: #fff;
-    margin: 20px 0px 18px 0px;
+    margin: 20px 0px;
 }
-.notice_wrap .notice_data{}
-.notice_wrap .notice_data li{}
+
 .notice_wrap .notice_data li a{
     color:#fff;
     font-size: 14px;
@@ -464,32 +481,221 @@
     background: #fff;
 
 }
-.notice_wrap .notice_data>li>a .date{
+.notice_wrap .notice_data > li > a .date{
     text-align: center;
     width: 84px;
     position: absolute;
     top: 0;
     right: 0;
-
 }
 
+.snsnews_wrpa{
+    height: 225px;
+    padding: 21px;
+}
+
+.snsnews_wrpa h2{
+    color: #00163d;
+    font-size: 22px;
+    margin-bottom: 22px;
+}
+
+.snsnews_wrpa .snsnews a img{
+    float: left;
+    width: 115px auto;
+    margin-right: 16px;
+}
+.snsnews_wrpa .snsnews p{
+    float: left;
+    width: 120px;
+    font-size: 13px;
+    letter-spacing: -0.5px;
+    line-height: 20px;
+    color:#4b4b4b;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+.snsnews_wrpa .snsnews p{
+    margin-bottom: 22px;
+}
+.snsnews_wrpa .snsnews .snsicon{
+    padding-left: 129px;
+}
+.snsicon_f, .snsicon_t, .snsicon_g, .snsicon_y{
+    float: left;
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/snsicon.png);
+    background-repeat: no-repeat;  
+    margin-right: 3px;
+    
+}
+.snsnews_wrpa .snsnews .snsicon .snsicon_f{
+    background-position: 0 0;
+}
+.snsnews_wrpa .snsnews .snsicon .snsicon_t{
+    background-position: -33px 0;
+}
+.snsnews_wrpa .snsnews .snsicon .snsicon_g{
+    background-position: -66px 0;
+}
+.snsnews_wrpa .snsnews .snsicon .snsicon_y{
+    background-position: -99px 0;
+    margin-right: 0;
+}
+.campus_tour{
+    width: 300px;
+    height: 225px;
+    background-image: url(../images/학교02.jpg);
+    background-position: -138px -49px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.campus_tour h3{
+    display: block;
+    fon-size: 16px;
+    width: 100%;
+    line-height: 52px;
+    text-align: center;
+    color:#fff;
+    background: #000;
+    opacity: 70%;
+    position: absolute;
+    bottom: 0; left: 0;
+}
+.video{
+    width: 300px;
+    height: 225px;
+    background-image: url(../images/학교04.jpg);
+    background-position: -258px -85px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.video .video_playbtn{
+    width: 60px; height: 60px;
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -30px;
+    margin-top: -30px;
+    border-radius: 50px;
+}
+.video .video_playbtn{
+    color: #fff;
+    font-size: 30px;
+    line-height: 55px;
+    text-align: center;
+}
+.recruitment_slider_wrap{
+    position: relative;
+}
+.recruitment_slider_wrap .r_slider{
+    position: relative;
+}
+.recruitment_slider_wrap .r_bgimg1{
+    width: 900px; height: 225px;
+    background-image: url(../images/학생01.png), url(../images/도서관02.jpg);
+    background-repeat: no-repeat;
+    background-position: 450px -25px, -5px -35px;
+}
+.recruitment_slider_wrap .r_slider_txt{
+    position: absolute;
+    top: 30px;left: 40px;
+}
+.recruitment_slider_wrap .r_slider_txt p{
+    color:#fd503f;
+    font-size: 33px;
+    /* font-weight: 500; */
+    /* line-height: 75px; */
+    letter-spacing: -4px;
+    line-height: 50px;
+    margin-bottom: 19px;
+}
+.recruitment_slider_wrap .r_slider_txt p span{
+    font-weight: bold;
+    font-size: 60px;
+}
+.recruitment_slider_wrap .r_slider_txt a{
+    width: 168px; height: 40px;
+    display: block;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+    background: rgba(255, 18, 1, 0.678); 
+    border: 1px solid rgba(255,255,255,0.5);
+}
+.recruitment_slider_wrap .r_sliderTap{
+    position: absolute;
+    top: 26px; right: 40px;
+}
+
+.recruitment_slider_wrap .r_sliderTap a{
+    float: left;
+    display: block;
+    width: 15px;height: 15px;
+    background: #535353;
+    border-radius: 50%;
+    margin-right: 13px;
+}
+
+.recruitment_slider_wrap .r_sliderTap a:last-child{
+    margin-right: 0;
+}
+
+.recruitment_slider_wrap .r_sliderTap a:hover{
+    background: #fd503f;
+}
+.recruitment_slider_wrap .r_sliderTap a.active{
+    background: #fd503f;
+}
 
 
 /* #content_wrap .container ul li:nth-child(2n){background:pink;} */
 #content_wrap .container > ul > li:nth-child(1){
-    width: 75%; height: 450px;}
-#content_wrap .container > ul > li:nth-child(2){height: 450px;}
+    width: 75%; height: 450px;
+}
+#content_wrap .container > ul > li:nth-child(2){
+    height: 450px;
+}
 #content_wrap .container > ul > li:nth-child(3){
     background: #00163b;
-    height: 225px;}
+    height: 225px;
+}
 #content_wrap .container > ul > li:nth-child(4){
     background: #1651b7;
     height: 225px;
 }
-#content_wrap .container > ul > li:nth-child(5){}
-#content_wrap .container > ul > li:nth-child(6){}
-#content_wrap .container > ul > li:nth-child(7){}
-#content_wrap .container > ul > li:nth-child(8){}
+#content_wrap .container > ul > li:nth-child(5){
+    background: #fff;
+    height: 225px;
+}
+#content_wrap .container > ul > li:nth-child(6){
+    /* background: #fff; */
+    height: 225px;
+}
+#content_wrap .container > ul > li:nth-child(7){
+    background: #fff;
+    height: 225px;
+}
+#content_wrap .container > ul > li:nth-child(8){
+    background: #fff;
+    height: 225px;
+    width: 75%;
+}
+
+.schedule_wrap{
+    width: 1200px;
+    height: 60px;
+    background: #fff;
+}
+
+
+
 
 
 
@@ -497,4 +703,55 @@
 #footer{
     height: 165px;
     background: #fff;
+    padding: 28px;
+}
+
+#footer .footer_menu_wrap{
+    width: 750px;
+    /* background: #eee; */
+    margin: 0 auto;
+}
+#footer .footer_menu_wrap .footer_menu{
+    padding-bottom: 15px;
+} 
+#footer .footer_menu_wrap .footer_menu li{
+    float: left;
+    position: relative;
+    margin-right: 20px;
+}
+#footer .footer_menu_wrap .footer_menu li:last-child{
+    margin-right: 0;
+}
+
+#footer .footer_menu_wrap .footer_menu li:after{
+    content:"";
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background: #454545;
+    position: absolute;
+    top: 5px;
+    left: -10px;
+}
+
+#footer .footer_menu_wrap .footer_menu li:first-child:after{
+    content: "";
+    display: none;
+}
+
+#footer .footer_menu_wrap .footer_menu li a{
+    /* display: block; */
+    font-size: 12pt;
+    color: #454545;
+    line-height: 15px;
+}
+#footer p{
+    font-size: 12px;
+    color: #878787;
+    padding-bottom: 2px;
+    line-height: 18px;
+}
+#footer span{
+    font-size: 12px;
+    color: #676767;
 }

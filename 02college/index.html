@@ -12,7 +12,7 @@
     <script src="js/jquery.bxslider.js"></script>
     <script>
         $(document).ready(function(){
-            var conslider = $(".slider").bxSlider({
+            var conslider1 = $(".slider").bxSlider({
                 controls:false,
                 // auto: true,
                 // pager: false,
@@ -21,10 +21,20 @@
             });
 
             $(".nextBtn").click(function(){
-                conslider.goToNextSlide();
+                conslider1.goToNextSlide();
             });
             $(".prevBtn").click(function(){
-                conslider.goToPrevSlide();
+                conslider1.goToPrevSlide();
+            });
+        });
+
+        $(document).ready(function(){
+            var conslider2 = $(".r_slider").bxSlider({
+                controls:false,
+                // auto: true,
+                // pager: false,
+                pagerCustom:".r_sliderTap"
+
             });
         });
     </script>
@@ -206,13 +216,114 @@
                         </ul>
                     </div>
                 </li>
-                <li>05</li>
-                <li>06</li>
-                <li>07</li>
-                <li>08</li>
+                <li>
+                    <div class="snsnews_wrpa">
+                        <h2>SNS NEWS</h2>
+                        <div class="snsnews clearfix">
+                            <a href="#" class="news">
+                                <img src="./images/학교01.jpg" alt="">
+                                <p>한국대학교는<br>2017학년도 신입생 입학식을 3월 4일(목) 본교 종합체육관에서 블라블라기사</p>
+                            </a>
+                            <ul class="snsicon">
+                                <li><a href="#">
+                                    <div class="snsicon_f"></div>
+                                </a></li>
+                                <li><a href="#">
+                                    <div class="snsicon_t"></div>
+
+                                </a></li>
+                                <li><a href="#">
+                                    <div class="snsicon_g"></div>
+                                </a></li>
+                                <li><a href="#">
+                                    <div class="snsicon_y"></div>
+                                </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="campus_tour">
+                        <h3>캠퍼스 투어</h3>
+                    </div>
+                </li>
+                <li>
+                    <div class="video">
+                        <a href="#"><div class="video_playbtn">
+                            <p>▶</p>
+                        </div></a>
+                    </div>
+                </li>
+                <li>
+                    <div class="recruitment_slider_wrap">
+                        <ul class="r_slider">
+                            <li>
+                                <div class="r_bgimg1"></div>
+                                <div class="r_slider_txt">
+                                    <p>2017년 신·편입생2차 모집1<br>
+                                        <span>2017.7.1~7.10</span>
+                                    </p>
+                                    <a href="#">입학사전예약 ▶</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="r_bgimg1"></div>
+                                <div class="r_slider_txt">
+                                    <p>2017년 신·편입생2차 모집2<br>
+                                        <span>2017.7.1~7.10</span>
+                                    </p>
+                                    <a href="#">입학사전예약 ▶</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="r_bgimg1"></div>
+                                <div class="r_slider_txt">
+                                    <p>2017년 신·편입생2차 모집3<br>
+                                        <span>2017.7.1~7.10</span>
+                                    </p>
+                                    <a href="#">입학사전예약 ▶</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="r_bgimg1"></div>
+                                <div class="r_slider_txt">
+                                    <p>2017년 신·편입생2차 모집4<br>
+                                        <span>2017.7.1~7.10</span>
+                                    </p>
+                                    <a href="#">입학사전예약 ▶</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="r_sliderTap">
+                            <a href="#" data-slide-index="0"></a>
+                            <a href="#" data-slide-index="1"></a>
+                            <a href="#" data-slide-index="2"></a>
+                            <a href="#" data-slide-index="3"></a>
+                        </div>
+                    </div>
+                </li>
             </ul>
+
+            <div class="schedule_wrap"></div>
         </div>
+
     </main>
-    <footer id="footer"></footer>
+    <footer id="footer">
+        <div class="footer_menu_wrap">
+            <ul class="footer_menu clearfix">
+                <li><a href="#">회사소개</a> </li>
+                <li><a href="#">한국대학교</a></li>
+                <li><a href="#">개인정보취급방침</a></li>
+                <li><a href="#">이용정책</a></li>
+                <li><a href="#">입점/제휴문의 및 광고</a></li>
+                <li><a href="#">이메일 무단수집거부</a></li>
+            </ul>
+            <p>대표자 : 홍길동 서울특별시 구로구 구로로300 (구로동 6가)     사업자등록번호 : 123-56-7890234<br>
+                통신판매업 신고번호 : 제 1234-서울 구로구-1004호  개인정보관리 책임자 : 홍길동    소비자피해보상보험<br>
+                고객센터 : 1234-5678  FAX : 02-1234-5678  HANGUKUNIVERSITY @HANGUK.CCOM</p>
+            <span>COPYRIGHT ⓒ HANGUK. ALL RIGHTS RESERVED.</span>
+        </div>
+       
+    </footer>
 </body>
 </html>
