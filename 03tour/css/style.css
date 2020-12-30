@@ -1,0 +1,324 @@
+@charset "utf-8";
+
+body{
+    background-image: url(../images/bg02.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+
+
+/*header*/
+#header{
+    margin-bottom: 56px;}
+.util_wrap{
+    width:100%;
+    height: 90px;
+    background-image: url(../images/04비행기.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #0d72a8;
+}
+.util_wrap .util{
+    width: 980px;
+    height: 90px;
+    margin: 0 auto;
+    position: relative;
+}
+.util_wrap .util .logo{
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0px;
+    top: 25px;
+}
+.util_wrap .util .logo a{
+    display: block;
+    width: 145px;
+    height: 45px;
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+}
+
+
+.util_wrap .util .search_wrap{
+    width: 290px;
+    height: 30px;
+    position: absolute;
+    left: 280px;
+    top: 50%;
+    transform: translateY(-50%)
+}
+.search_wrap form{
+    position: relative;
+}
+.search_title{
+    display: block;
+    width: 60px;
+    height: 20px;
+    background-image: url(../images/searchtext.jpg);
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    text-indent: -9999px;
+    z-index: 1;
+}
+.search_inp{
+    width: 290px;
+    height: 30px;
+    border: 3px solid #eee;
+    border-radius: 25px;
+    text-indent: 85px;
+    position: relative;
+}
+.search_btn{
+    width: 14px;
+    height: 14px;
+    background-image: url(../images/search.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px;
+    position: absolute;
+    top: 50%;
+    right: 17px;
+    transform:translateY(-50%);
+    border: 0 none;
+}
+.util_wrap .util .sns_wrap{
+    width: 342px;
+    height: 24px;
+    position:absolute;
+    right: 0px;
+    top: 32px;;
+}
+.sns_wrap h2{
+    color: #fff;
+    line-height: 24px;
+    letter-spacing: -1px;
+}
+.sns_wrap li:first-child{
+    width: 200px;
+    margin-right: 31px;
+}
+.sns_wrap li:last-child{
+    margin-right: 0;
+}
+.sns_wrap li{
+    float: left;
+}
+.sns_wrap li .sns_f{
+    width: 24px; height: 24px;
+    background-image: url(../images/sns.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    margin-right: 5px;
+}
+.sns_wrap li .sns_t{
+    width: 24px; height: 24px;
+    background-image: url(../images/sns.jpg);
+    background-repeat: no-repeat;
+    background-position: -24px 0;
+    margin-right: 5px;
+}
+.sns_wrap li .sns_b{
+    width: 24px; height: 24px;
+    background-image: url(../images/sns.jpg);
+    background-repeat: no-repeat;
+    background-position: -48px 0;
+    margin-right: 5px;
+}
+.sns_wrap li .sns_i{
+    width: 24px; height: 24px;
+    background-image: url(../images/sns.jpg);
+    background-repeat: no-repeat;
+    background-position: -72px 0;
+}
+
+
+
+
+/*header_gnb*/
+#header{
+}
+#header .gnb_wrap{
+    height: 64px;
+    background-image: url(../images/gnb_bg.jpg);
+}
+.gnb_wrap .gnb{
+    width: 980px;
+    margin: 0 auto;
+}
+#header .gnb ul{
+    position: relative;
+}
+#header .gnb li{
+    width: 163px;
+    height: 60px;                            
+    float: left;
+    border-right: 1px solid #d8d8d8;
+}
+#header .gnb li:first-child{
+    border-left: 1px solid #d8d8d8;
+}
+#header .gnb li a{
+    display: block;
+    line-height: 62px;
+    text-align: center;
+    font-weight: bold;
+}
+.gnb li a:hover{
+    background: #0e73a7;
+    color: #fff;
+}
+
+
+
+
+/*main*/
+#main{}
+#container{
+    width: 980px;
+    margin: 0 auto;
+}
+#container .m_section01{
+    width: 980px;
+    margin-bottom: 16px;
+}
+.reserve_wrap, .m_contents01, .m_contents02{
+    float: left;
+    margin-right: 16px;
+}  
+.m_section01 .reserve_wrap{
+    width: 482px;
+    height: 300px;
+    margin-bottom: 16px;
+}
+.reserve_wrap .r_slide_wrap{
+    width: 350px;
+    height: 300px;
+    float: right;
+    background: pink;
+}
+.reserve_wrap .r_slide_tab{
+    width: 132px;
+    height: 300px;
+    float: left;
+    background: pink;
+}
+
+
+.m_section01 .travel_wrap{
+    width: 482px;
+    height: 557px;
+    background: #eee;
+    margin-right: 0;
+    float: right;
+}
+
+
+.m_section01 .m_contents01{
+    width: 233px;
+    height: 240px;
+    position: relative;
+}
+.m_contents01 .m_contents01_txt{
+    width: 233px;
+    height: 50px;
+    background: #152630;
+    padding: 0 20px;
+    position: absolute;
+    bottom: 0;
+    background-image: url(../images/m_btn.png);
+    background-repeat: no-repeat;
+    background-position: 204px 18px;
+}
+.m_contents01 .m_contents01_txt .left{
+    float: left;
+    line-height: 50px;
+    color:#fff;
+    font-weight: bold;
+}
+.m_contents01 .m_contents01_txt .right{
+    float: right;
+    line-height: 50px;
+    color:#6fc564;
+    padding-right: 20px;
+}
+
+
+
+#container .m_section02{
+    width: 980px;
+    margin-bottom: 16px;
+}
+.ms_contents01, .ms_contents02, .m_contents02, .m_contents03{
+    float: left;
+    width: 233px;
+    height: 240px;
+    background: #eee;
+    margin-right: 16px;
+    position: relative;
+}
+.m_contents03{
+    margin-right: 0;
+}
+
+
+.m_section02 .ms_contents01{}
+.m_section02 .ms_contents01 ul{}
+.m_section02 .ms_contents01 li{
+    float: left;
+    width: 233px;
+}
+
+.ms_con_slideTxt{
+    width: 100%;
+    height: 65px;
+    padding: 15px 20px;
+    background: #529351;
+    position: absolute;
+    bottom: 0;
+}
+.ms_con_slideTxt a{
+    color: #fff;
+    letter-spacing: -1px;
+    line-height: 18px;
+}
+.ms_con_slideTxt span{
+    color:#e3a200;
+}
+
+#container .m_section03{
+    width: 980px;
+    margin-bottom: 16px;
+}
+.m_info01, .m_info02, .m_info03, .m_info04{
+    float: left;
+    width: 233px;
+    height: 240px;
+    background: #eee;
+    margin-right: 16px;
+} 
+.m_info04{
+    margin-right: 0;
+}
+
+
+
+/*footer*/
+#footer{
+    width: 980px;
+    height: 97px;
+    background: #eee;
+    margin: 0 auto;
+}
+
+
+
+/*common*/
+
+.fwb{font-weight: bold;}
