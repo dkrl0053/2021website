@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="css/jquery.bxslider.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/colorbox.css">
     <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.colorbox-min.js"></script>
     <script src="js/jquery.bxslider.js"></script>
     <script>
         $(document).ready(function(){
@@ -34,7 +36,15 @@
                 // auto: true,
                 // pager: false,
                 pagerCustom:".r_sliderTap"
+            });
+     
+        });
 
+        $(document).ready(function(){
+            $(".y_video").colorbox({
+                iframe:true,
+                innerWidth:700,
+				innerHeight:393.75
             });
         });
     </script>
@@ -249,7 +259,7 @@
                 </li>
                 <li>
                     <div class="video">
-                        <a href="#"><div class="video_playbtn">
+                        <a href="https://www.youtube.com/embed/PzUZ1zP940U" class="y_video"><div class="video_playbtn">
                             <p>▶</p>
                         </div></a>
                     </div>
