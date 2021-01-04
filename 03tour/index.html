@@ -19,6 +19,36 @@
                 pagerCustom:".r_slide_tab"
 
             });
+
+            const conslider2 = $(".slider01").bxSlider({
+                pager:false,
+                controls:false
+
+            });
+
+            $(".nextBtn01").click(function(){
+                conslider2.goToNextSlide();
+            });
+            $(".prevBtn01").click(function(){
+                conslider2.goToPrevSlide();
+            });
+            
+           
+
+        });
+
+        $(document).ready(function(){
+            const conslider3 = $(".slider02").bxSlider({
+                pager:false,
+                controls:false
+
+            });
+            $(".nextBtn02").click(function(){
+                conslider3.goToNextSlide();
+            });
+            $(".prevBtn02").click(function(){
+                conslider3.goToPrevSlide();
+            });
         });
     </script>
     <style>
@@ -37,7 +67,31 @@
             50%{transform:translate(-250px, -1100px) scale(1.1);}
             100%{transform:translate(-250px, -1050px) scale(1.1);}
         }
-
+        @keyframes ball_ani4{
+            0%{position: absolute;
+               top: 800px;
+               left: 45px;
+               transform: rotate(10deg);}
+            50%{position: absolute;
+               top: 700px;
+               left: 45px;
+               transform: rotate(-10deg);}
+            100%{position: absolute;
+               top: 700px;
+               left: 45px;
+               transform: rotate(10deg);}  
+        }
+        @keyframes air_ani1{
+            from{position: absolute;
+                top: 350px;
+                left: -620px;
+                width: 600px;}
+			to{position: absolute;
+                top: 30px;
+                left: 1999px;
+                width: 400px;}
+        }
+        
     </style>
 </head>
 <body>
@@ -77,18 +131,40 @@
         <nav class="gnb_wrap">
             <div class="gnb">
                 <ul class="clearfix">
-                    <li><a href="#">여행도시</a></li>
-                    <li><a href="#">호텔예약</a></li>
-                    <li><a href="#">렌트카</a></li>
-                    <li><a href="#">여행TIP</a></li>
-                    <li><a href="#">회사소개</a></li>
-                    <li><a href="#">커뮤니티</a></li>
+                    <li>
+                        <div class="gnb_bar"></div>
+                        <a href="#" class="">여행도시</a>
+                    </li>
+                    <li>
+                        <div class="gnb_bar"></div>
+                        <a href="#">호텔예약</a>
+                    </li>
+                    <li>
+                        <div class="gnb_bar"></div>
+                        <a href="#">렌트카</a>
+                    </li>
+                    <li>
+                        <div class="gnb_bar"></div>
+                        <a href="#">여행TIP</a>
+                    </li>
+                    <li>
+                        <div class="gnb_bar"></div>
+                        <a href="#">회사소개</a>
+                    </li>
+                    <li>
+                        <div class="gnb_bar"></div>
+                        <a href="#">커뮤니티</a>
+                    </li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <main id="main">
+        <div class="ani_wrap">
+            <img src="images/content2.png" alt="" class="ball_ani4">
+            <img src="images/reallyAir.png" alt="" class="air_ani1">
+        </div>
         <section id="m_section01">
             <div class="reserve_wrap mb16">
                 <div class="reserve">
@@ -336,7 +412,23 @@
         </section>
         <section id="m_section02">
             <div class="ms_contents mr16 hover_ani">
-                <ul>
+                <ul class="slider01 clearfix">
+                    <li>
+                        <a href="#"><img src="images/03tr03.jpg" alt="" class="img_ani">
+                        <div class="ms_con01_slideTxt">
+                            <p class="fwb">HILLTON HOTEL(PARIS) 1</p>
+                            <p><span>★★★</span>★★</p>
+                        </div>
+                    `   </a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/03tr03.jpg" alt="" class="img_ani">
+                        <div class="ms_con01_slideTxt">
+                            <p class="fwb">HILLTON HOTEL(PARIS) 1</p>
+                            <p><span>★★★</span>★★</p>
+                        </div>
+                    </a>
+                    </li>
                     <li>
                         <a href="#"><img src="images/03tr03.jpg" alt="" class="img_ani">
                         <div class="ms_con01_slideTxt">
@@ -346,9 +438,31 @@
                     </a>
                     </li>
                 </ul>
+                <div class="slider01_btn">
+                    <div class="nextBtn01"></div>
+                    <div class="prevBtn01"></div>
+                </div>
             </div>
             <div class="ms_contents mr16 hover_ani">
-                <ul>
+                <ul class="slider02 clearfix">
+                    <li>
+                        <a href="#">
+                            <img src="images/03tr04.jpg" alt="" class="img_ani">
+                            <div class="ms_con02_slideTxt">
+                            <p class="fwb">관광명소(디즈니)</p>
+                            <p><span>★★★★</span>★</p>
+                        </div>
+                    </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/03tr04.jpg" alt="" class="img_ani">
+                            <div class="ms_con02_slideTxt">
+                            <p class="fwb">관광명소(디즈니)</p>
+                            <p><span>★★★★</span>★</p>
+                        </div>
+                    </a>
+                    </li>
                     <li>
                         <a href="#">
                             <img src="images/03tr04.jpg" alt="" class="img_ani">
@@ -359,6 +473,10 @@
                     </a>
                     </li>
                 </ul>
+                <div class="slider02_btn">
+                    <div class="nextBtn02"></div>
+                    <div class="prevBtn02"></div>
+                </div>
             </div>
             <div class="ms_contents mr15 hover_ani">
                  <a href="#">
@@ -393,19 +511,97 @@
             <div class="m_contents02 mr16 hover_ani">
                 <a href="#">
                     <img src="images/03tr07.jpg" alt="" class="t_info_img">
-                    <div class="t_info_bg"></div>
-                    <div class="t_info_txt">
-                        <h2>여행정보</h2>
-                        <p>다양한 나라의 명소와 맛집 등<br>
-                            상세한 정보를 볼 수 있습니다.</p>
-                        <div class="wrap">
-                            <div class="bar1"></div>
-                            <div class="bar2"></div>
+                    <div class="t_overlay">
+                        <div class="t_info_bg"></div>
+                        <div class="t_info_txt">
+                            <div class="t_info_title">
+                                <img src="images/t_info_icon.png" alt="">
+                                <h2>여행정보</h2>
+                            </div>
+                            <p class="mb16">다양한 나라의 명소와 맛집 등<br>
+                                상세한 정보를 볼 수 있습니다.</p>
+                            
                         </div>
+                    </div>    
+                    <div class="wrap">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
                     </div>
                 </a>
             </div>
+            <div class="m_contents02 mr16 hover_ani">
+                <a href="#">
+                    <img src="images/03tr08.jpg" alt="" class="f_info_img">
+                    <div class="f_overlay">
+                        <div class="f_info_bg"></div>
+                        <div class="f_info_txt">
+                            <div class="f_info_title">
+                                <img src="images/f_info_icon.png" alt="">
+                                <h2>맛집정보</h2>
+                            </div>
+                            <p class="mb16">다양한 나라의 명소와 맛집 등<br>
+                                상세한 정보를 볼 수 있습니다.</p>
+                            
+                        </div>
+                    </div>    
+                    <div class="wrap">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="m_contents02 mr16 hover_ani">
+                <a href="#">
+                    <img src="images/03tr09.jpg" alt="" class="a_info_img">
+                    <div class="a_overlay">
+                        <div class="a_info_bg"></div>
+                        <div class="a_info_txt">
+                            <div class="a_info_title">
+                                <img src="images/a_info_icon.png" alt="">
+                                <h2>숙박정보</h2>
+                            </div>
+                            <p class="mb16">다양한 나라의 명소와 맛집 등<br>
+                                상세한 정보를 볼 수 있습니다.</p>
+                            
+                        </div>
+                    </div>    
+                    <div class="wrap">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="m_contents02 hover_ani">
+                <a href="#">
+                    <img src="images/03tr10.jpg" alt="" class="p_info_img">
+                    <div class="p_overlay">
+                        <div class="p_info_bg"></div>
+                        <div class="p_info_txt">
+                            <div class="p_info_title">
+                                <img src="images/p_info_icon.png" alt="">
+                                <h2>여행정보</h2>
+                            </div>
+                            <p class="mb16">다양한 나라의 명소와 맛집 등<br>
+                                상세한 정보를 볼 수 있습니다.</p>
+                        </div>
+                    </div>    
+                    <div class="wrap">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                    </div>
+                </a>
+            </div>
+        </section>
     </main>
-    <footer id="footer"></footer>
+    <footer id="footer">
+        <ul class="footerutil clearfix">
+            <li class="pl0"><a href="">이용약관</a></li>
+            <li><a href="" class="fwb">개인정보취급방침</a></li>
+            <li><a href="">사이트맵</a></li>
+            <li><a href="">고객센터</a></li>
+            <li><a href="">광고 및 제휴문의</a></li>
+        </ul>
+        <p>서울시 영등포구 여의도동 1234567 &nbsp; (주)하이미디어 &nbsp; 사업자등록번호: 000-00-00000 &nbsp; 대표: 홍길동 &nbsp; TEL : 02-0000-0000<br>COPYRIGHT(C)2020 HIMEDIA TOUR. ALL RIGHTS RESERVED.</p>
+    </footer>
 </body>
 </html>
