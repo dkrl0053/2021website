@@ -1080,6 +1080,16 @@ body{
 
 
 
+/*sub*/
+.container_wrap{
+    background: #efefef;
+    background-image: url(../images/sub_bgp.png);
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: center;
+
+}
+
 /*common*/
 .mb15{margin-bottom: 15px !important;}
 .mb16{margin-bottom: 16px !important;}
