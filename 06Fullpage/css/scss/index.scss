@@ -1,0 +1,290 @@
+@charset 'utf-8';
+@import "reset";
+@import "nav";
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  color: #fff;
+}
+.title {
+  font-family: "Bebas Neue", cursive;
+  font-size: 40px;
+}
+p {
+  font-size: 20px;
+}
+html,
+body {
+  height: 100%;
+}
+
+#main {
+  position: relative;
+  top: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  .section {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+
+  /*page_1*/
+  section.page_01 {
+    background-image: url(../img/main_page_bg01.jpg);
+    .main {
+      .main1st_ani {
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        div {
+          position: absolute;
+          top: 0;
+          z-index: 2;
+          width: 100%;
+          height: 100%;
+          background-position: center;
+          background-repeat: no-repeat;
+          -webkit-background-size: cover;
+          background-size: cover;
+        }
+
+        .m_ani1 {
+          left: -350px;
+          opacity: 0.4;
+          background-image: url(../img/main1st_ani_bg_2.png);
+          animation-name: main1stBg1;
+          animation-duration: 0.6s;
+          animation-iteration-count: 1;
+          animation-timing-function: ease-in-out;
+        }
+        .m_ani2 {
+          left: -160px;
+          opacity: 0.18;
+          background-image: url(../img/main1st_ani_bg_3.png);
+          animation-name: main1stBg2;
+          animation-duration: 0.9s;
+          animation-iteration-count: 1;
+          animation-timing-function: ease-in-out;
+        }
+      }
+      @keyframes main1stBg1 {
+        0% {
+          left: -450px;
+          opacity: 0;
+        }
+        50% {
+          left: -250px;
+          opacity: 0.2;
+        }
+        100% {
+          left: -350px;
+          opacity: 0.4;
+        }
+      }
+      @keyframes main1stBg2 {
+        0% {
+          left: -300px;
+          opacity: 0;
+        }
+        50% {
+          left: -60px;
+          opacity: 0.09;
+        }
+        100% {
+          left: -160px;
+          opacity: 0.18;
+        }
+      }
+      .text {
+        width: 100%;
+        position: absolute;
+        top: 45%;
+        transform: translateY(-50%);
+        z-index: 3;
+        img {
+          position: absolute;
+          margin-bottom: 30px;
+          left: -50px;
+          opacity: 0;
+          animation-name: main1stTxt1;
+          animation-delay: 1s;
+          animation-duration: 0.4s;
+          animation-iteration-count: 1;
+          animation-timing-function: ease-in-out;
+          animation-fill-mode: forwards;
+        }
+        p {
+          position: absolute;
+          top: 105px;
+          left: -50px;
+          opacity: 0;
+          animation-name: main1stTxt2;
+          animation-delay: 1.1s;
+          animation-duration: 0.3s;
+          animation-iteration-count: 1;
+          animation-timing-function: ease-in-out;
+          animation-fill-mode: forwards;
+        }
+      }
+      @keyframes main1stTxt1 {
+        0% {
+          left: -50px;
+          opacity: 0;
+        }
+        100% {
+          left: 160px;
+          opacity: 1;
+        }
+      }
+      @keyframes main1stTxt2 {
+        0% {
+          left: -50px;
+          opacity: 0;
+        }
+        100% {
+          left: 160px;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  /*page_2*/
+  section.page_02 {
+    background-image: url(../img/main_page_bg02.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .main {
+      h1,
+      p {
+        text-align: center;
+      }
+      h1 {
+        font-size: 100px;
+
+        &:after {
+          content: "";
+          display: block;
+          width: 190px;
+          height: 5px;
+          background: #fff;
+          margin: 0 auto;
+          margin-top: 20px;
+          margin-bottom: 50px;
+        }
+      }
+      p {
+        margin-bottom: 25px;
+      }
+    }
+  }
+  /*page_3*/
+  section.page_03 {
+    background-image: url(../img/main_page_bg03.jpg);
+    position: relative;
+    h1 {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-size: 90px;
+      line-height: 85px;
+      z-index: 2;
+    }
+    .over {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #1d1d1d;
+      opacity: 0.7;
+    }
+  }
+
+  /*page_4*/
+  section.page_04 {
+    background-image: url(../img/main_page_bg04.jpg);
+    padding: 0 340px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .main {
+      h1,
+      p {
+        text-align: left;
+      }
+      h1 {
+        font-size: 80px;
+        line-height: 70px;
+
+        &:after {
+          content: "";
+          display: block;
+          width: 190px;
+          height: 5px;
+          background: #fff;
+          margin-top: 50px;
+          margin-bottom: 50px;
+        }
+      }
+      p {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  /*page_5*/
+  section.page_05 {
+    position: relative;
+    background-image: url(../img/main_page_bg05.jpg);
+    padding: 0 340px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .main {
+      .5st_txt {
+        width: 100%;
+        h1,
+        p {
+          text-align: left;
+        }
+        h1 {
+          font-size: 80px;
+          line-height: 70px;
+
+          &:after {
+            content: "";
+            display: block;
+            width: 190px;
+            height: 5px;
+            background: #fff;
+            margin-top: 50px;
+            margin-bottom: 50px;
+          }
+        }
+      }
+      .over {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #1d1d1d;
+        opacity: 0.7;
+      }
+    }
+  }
+}

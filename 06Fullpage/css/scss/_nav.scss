@@ -1,0 +1,208 @@
+@charset 'utf-8';
+
+#header_wrap {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 88px;
+  .header {
+    position: relative;
+    top: 50px;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    .logo {
+      width: 175px;
+    }
+    .nav_wrap {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      .nav_gnb {
+        display: none;
+      }
+      .sns_icon_wrap {
+        display: flex;
+        a {
+          width: 30px;
+          height: 30px;
+          margin-right: 20px;
+          background-image: url(../img/sns_icon.png);
+          background-repeat: no-repeat;
+          background-size: cover;
+          &:nth-child(1) {
+            background-position: 0 0;
+          }
+          &:nth-child(2) {
+            background-position: -31px 0;
+          }
+          &:nth-child(3) {
+            background-position: -59px 0;
+          }
+        }
+      }
+      .toggle_menu {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        div {
+          width: 30px;
+          height: 3px;
+          background: #fff;
+          border-radius: 100%;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          transition: 0.3s;
+        }
+        .bar1 {
+          top: 14px;
+        }
+        .bar2 {
+          top: 24px;
+        }
+        .bar3 {
+          top: 34px;
+        }
+      }
+    }
+    /*header end*/
+  }
+  /*scroll*/
+  .scroll {
+    position: absolute;
+    top: 50%;
+    right: 88px;
+    transform: translateY(-50%);
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    img {
+      width: 29px;
+      margin: 0 auto;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: 0.3s;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .scroll_up {
+      margin-bottom: 80px;
+    }
+    .scroll_down {
+      margin-top: 80px;
+    }
+    .scroll_btn {
+      margin: 0 auto;
+      li {
+        cursor: pointer;
+        margin-bottom: 40px;
+        width: 10px;
+        height: 10px;
+        background: #fff;
+        border-radius: 100%;
+        transition: 0.3s;
+        &:last-child {
+          margin-bottom: 0px;
+        }
+        &:hover {
+          transform: scale(1.5);
+          background: #7534b4;
+        }
+        &:active {
+          transform: scale(1.5);
+          background: #7534b4;
+        }
+      }
+    }
+  }
+  /*mouse_icon*/
+  @keyframes mouseBody {
+    0% {
+      margin-bottom: 9px;
+    }
+    50% {
+      margin-bottom: 18px;
+    }
+    100% {
+      margin-bottom: 9px;
+    }
+  }
+  @keyframes wheelani1 {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+    10% {
+      opacity: 0.5;
+    }
+  }
+  @keyframes wheelani2 {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+  .mouse_icon {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    .mou_body {
+      width: 50px;
+      height: 70px;
+      border: 4px solid #fff;
+      border-radius: 30px;
+      padding-top: 12px;
+      margin-bottom: 9px;
+      animation-name: mouseBody;
+      animation-duration: 1s;
+      animation-delay: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      .mou_wheel {
+        width: 6px;
+        height: 16px;
+        background: #fff;
+        border-radius: 30px;
+        margin: 0 auto;
+      }
+    }
+    .wheel_down {
+      margin: 0 auto;
+    }
+    .wd_ani_1 {
+      opacity: 1;
+      animation-name: wheelani1;
+      animation-duration: 1s;
+      animation-delay: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+    .wd_ani_2 {
+      opacity: 1;
+      animation-name: wheelani2;
+      animation-duration: 1s;
+      animation-delay: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+  }
+}
